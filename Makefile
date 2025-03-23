@@ -6,10 +6,12 @@ TARGET=xor
 
 PREFIX=/usr
 
-all:
+all: xor
+
+xor:
 	$(CC) $(CCFLAGS) -o $(TARGET) $(SOURCE)
 
-install: all
+install: xor
 	cp $(TARGET) $(PREFIX)/local/bin/$(TARGET)
 	chmod +x $(PREFIX)/local/bin/$(TARGET)
 
