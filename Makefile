@@ -8,7 +8,7 @@ PREFIX=/usr
 
 all: xor
 
-xor:
+xor: $(SOURCE)
 	$(CC) $(CCFLAGS) -o $(TARGET) $(SOURCE)
 
 install: xor
