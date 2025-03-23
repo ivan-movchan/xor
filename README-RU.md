@@ -1,4 +1,4 @@
-# xor
+![xor](logo.png)
 
 [English](README.md) / [Русский](README-RU.md)
 
