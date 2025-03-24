@@ -4,29 +4,38 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define VERSION  "1.0"
+#define VERSION  "1.1"
 #define YEARS    "2025"
 #define AUTHOR   "Ivan Movchan <ivan.movchan.07@gmail.com>"
 #define HOMEPAGE "https://github.com/ivan-movchan/xor"
 
-void main(int argc, char** argv)
+int main(int argc, char** argv)
 {
     if (argc == 1)
     {
-        printf("Usage: xor integer_value [< input_file [> output_file]]\n");
-	printf("       xor -v\n");
-    }
-    else if (!strcmp(argv[1], "-v"))
+        puts("Usage: xor integer_value [< input_file [> output_file]]");
+        puts("       xor -v");
+        return EXIT_SUCCESS;
+    };
+
+    if (!strcmp(argv[1], "-v"))
     {
         printf("xor %s\nCopyright (c) %s %s\n%s\n", VERSION, YEARS, AUTHOR, HOMEPAGE);
-    }
-    else
-    {
-        int value = atoi(argv[1]);
-
-        while (!feof(stdin))
-        {
-            putchar((fgetc(stdin) ^ value));
-        };
+        return EXIT_SUCCESS;
     };
+
+    int value = atoi(argv[1]);
+
+    if (value == 0)
+    {
+        puts("atoi returned 0 - nothing interesting will happen. Aborting.");
+        return EXIT_SUCCESS;
+    };
+
+    while (!feof(stdin))
+    {
+        putchar((fgetc(stdin) ^ value));
+    };
+
+    return EXIT_SUCCESS;
 }
