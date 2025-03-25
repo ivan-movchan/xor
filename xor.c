@@ -13,14 +13,13 @@ int main(int argc, char** argv)
 {
     if (argc == 1)
     {
-        puts("Usage: xor integer_value [< input_file [> output_file]]");
-        puts("       xor -v");
+        puts("Usage: xor [-v] value [< input_file [> output_file]]");
         return EXIT_SUCCESS;
     };
 
     if (!strcmp(argv[1], "-v"))
     {
-        printf("xor %s\nCopyright (c) %s %s\n%s\n", VERSION, YEARS, AUTHOR, HOMEPAGE);
+        printf("xor %s\nCopyright (C) %s %s\n%s\n", VERSION, YEARS, AUTHOR, HOMEPAGE);
         return EXIT_SUCCESS;
     };
 
