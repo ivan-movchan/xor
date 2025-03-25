@@ -1,8 +1,9 @@
-![xor](logo.png)
+![xor](logo.png#gh-light-mode-only)
+![xor](logo-dark.png#gh-dark-mode-only)
 
 [English](README.md) / [Русский](README-RU.md)
 
-A tiny utility that performs XOR (eXclusive OR) bitwise operation on `stdin` (console input stream) data byte by byte.
+A tiny console utility that performs XOR (eXclusive OR) bitwise operation on `stdin` (standard input stream) data byte by byte.
 
 ### Installation
 
@@ -25,12 +26,12 @@ $ sudo make install
 To perform XOR operation on `stdin` data:
 
 ```bash
-$ xor integer_value [< input_file [> output_file]]`
+$ xor value [< input_file [> output_file]]`
 ```
 
-* `integer_value` - a positive integer value;
-* `< input_file` - read data from `input_file` file and write into console (`stdin`);
-* `> output_file` - write data from `stdout` (console output stream) to `output_file` file.
+* `value` - a positive integer value;
+* `< input_file` - transfer data from `input_file` to `stdin` (standard input stream);
+* `> output_file` - transfer data from `stdout` (standard output stream) to `output_file`.
 
 To display program version and exit:
 
