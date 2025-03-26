@@ -3,7 +3,7 @@
 
 [English](README.md) / [Русский](README-RU.md)
 
-A tiny console utility that performs XOR (eXclusive OR) bitwise operation on `stdin` (standard input stream) data byte by byte.
+**xor** is a tiny console utility that performs XOR (eXclusive OR) bitwise operation on `stdin` (standard input stream) data byte by byte.
 
 ### Installation
 
