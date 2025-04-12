@@ -3,46 +3,60 @@
 
 [English](README.md) / [Русский](README-RU.md)
 
-**xor** is a tiny console utility that performs XOR (eXclusive OR) bitwise operation on `stdin` (standard input stream) data byte by byte.
+**xor** is a tiny utility that performs XOR (eXclusive OR) bitwise operation
+on text. That's all.
 
 ### Installation
 
-#### Dependencies
+Pre-compiled binaries for Windows and GNU/Linux systems are available
+for download in ["Releases"](https://github.com/ivan-movchan/xor/releases).
 
-* `gcc`, `clang` or any other C compiler;
-* `make`.
+For building from sources install any C compiler (GCC, Clang, etc.)
+and GNU make, then edit `Makefile` if need and run `make`.
+It is recommended to build in *NIX environment like MSYS2,
+Windows Subsystem for Linux (WSL) or real *NIX system.
 
-Edit `Makefile` to match your local setup (compilers, libraries, etc.) if need.
-
-#### Build instructions
-
-```bash
-$ make
-$ sudo make install
-```
+You can run `make install` to install xor and `make uninstall` to uninstall it.
+(Actual for *NIX systems, root privileges are required.)
 
 ### Usage
 
-To perform XOR operation on `stdin` data:
-
 ```bash
-$ xor value [< input_file [> output_file]]`
+$ xor [-v] value [< input_file [> output_file]]
 ```
 
-* `value` - a positive integer value;
-* `< input_file` - transfer data from `input_file` to `stdin` (standard input stream);
-* `> output_file` - transfer data from `stdout` (standard output stream) to `output_file`.
-
-To display program version and exit:
-
-```
-$ xor -v
-```
+* `value` — a positive integer value. Mandatory to be specified.
+* `-v` — display program version and exit.
+* `< input_file` — process data from `input_file`.
+* `> output_file` — write XOR\'ed data to `output_file`.
 
 ### Authors
 
 xor is written by [Ivan Movchan](https://github.com/ivan-movchan).
 
+### Contributing
+
+Want to make the project better?
+
+* Feel free to fork the repository, improve the program and make a pull request
+  to accept your code to the project. Read the source code
+  for better understanding coding style
+  (max. 80 symbols per line, 4 spaces indent, etc.).
+
+* Do not hesitate to report bugs/crashes and suggest new ideas
+  using ["Issues"](https://github.com/ivan-movchan/xor/issues)
+  or by contacting the developer.
+
+  Before reporting a bug/crash make sure you are using the latest
+  program version — your problem may have been already fixed in latest version.
+  When reporting a bug/crash, also tell the operating system version
+  (i. e. *Windows 7 x64*) and error messages the program displays.
+
+### History
+
+See [CHANGELOG.md](CHANGELOG.md) for version history.
+
 ### License
 
-See [LICENSE](LICENSE) for copyright and licensing details.
+xor is free software released under the terms of MIT License.
+See [LICENSE](LICENSE) file for further details.
