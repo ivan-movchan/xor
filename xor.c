@@ -1,4 +1,11 @@
-// See LICENSE for copyright and licensing details.
+/*
+ * Copyright (c) 2025 Ivan Movchan <ivan.movchan.07@gmail.com>
+ *
+ * This file is a part of xor.
+ *
+ * xor is free software released under the terms of MIT License.
+ * See LICENSE file for further details.
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,10 +15,22 @@
 #define YEARS    "2025"
 #define AUTHOR   "Ivan Movchan <ivan.movchan.07@gmail.com>"
 #define HOMEPAGE "https://github.com/ivan-movchan/xor"
+#define LICENSE  "MIT License"
 
 void usage()
 {
 	puts("Usage: xor [-v] value [< input_file [> output_file]]");
+	exit(EXIT_SUCCESS);
+}
+
+void version()
+{
+	printf(
+		"xor %s — Copyright (C) %s %s.\n"
+		"This is free software released under the terms of %s.\n"
+		"%s\n",
+		VERSION, YEARS, AUTHOR, LICENSE, HOMEPAGE
+	);
 	exit(EXIT_SUCCESS);
 }
 
@@ -23,8 +42,7 @@ int main(int argc, char** argv)
 	{
 		if (!strcmp(argv[i], "-v"))
 		{
-			printf("xor %s\nCopyright (C) %s %s\n%s\n", VERSION, YEARS, AUTHOR, HOMEPAGE);
-			return EXIT_SUCCESS;
+			version();
 		}
 		else
 		{
@@ -39,7 +57,7 @@ int main(int argc, char** argv)
 
 	if (value == 0)
 	{
-		puts("atoi returned 0 - nothing interesting will happen. Aborting.");
+		puts("atoi returned 0 — nothing will happen. Aborting.");
 		return EXIT_SUCCESS;
 	};
 
