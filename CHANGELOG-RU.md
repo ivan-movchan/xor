@@ -3,7 +3,7 @@
 
 [English](CHANGELOG.md) / [Русский](CHANGELOG-RU.md)
 
-### xor 1.2 _(9 апреля 2025 года)_
+### xor 1.2 _(12 апреля 2025 года)_
 
 * Добавлены цели сборки для Windows и GNU/Linux.
   Подробности — в файле `Makefile`.
