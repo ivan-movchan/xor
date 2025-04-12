@@ -38,6 +38,11 @@ int main(int argc, char** argv)
 {
 	int value = 0;
 
+	if (argc == 1)
+	{
+		usage();
+	};
+
 	for (int i = 1; i < argc; ++i)
 	{
 		if (!strcmp(argv[i], "-v"))
